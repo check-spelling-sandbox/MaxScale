@@ -1,0 +1,23 @@
+# Public Keys
+-----BEGIN PUBLIC KEY-----
+-----END PUBLIC KEY-----
+
+# RSA Private Key
+-----BEGIN RSA PRIVATE KEY-----
+-----END RSA PRIVATE KEY-----
+
+# GPG Public Key
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+-----END PGP PUBLIC KEY BLOCK-----
+
+# win_big-mdev-10092.test
+create procedure add_data()
+end;
+
+# test_ed25519_signature.cc
+string pubkey1
+};
+
+# ...
+ Populate table
+--enable_query_log

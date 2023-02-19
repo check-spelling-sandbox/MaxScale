@@ -1,0 +1,210 @@
+# See https://github.com/check-spelling/check-spelling/wiki/Configuration-Examples:-patterns
+
+# Automatically suggested patterns
+# hit-count: 5876 file-count: 153
+# hex runs
+\b[0-9a-fA-F]{16,}\b
+
+# hit-count: 3338 file-count: 234
+# hex digits including css/html color classes:
+(?:[\\0][xX]|\\u|[uU]\+|#x?|\%23)[0-9_a-fA-FgGrR]*?[a-fA-FgGrR]{2,}[0-9_a-fA-FgGrR]*(?:[uUlL]{0,3}|[iu]\d+)\b
+
+# hit-count: 1705 file-count: 1026
+# version suffix <word>v#
+(?:(?<=[A-Z]{2})V|(?:(?:db|f)ser|)(?<=[a-z]{2}|[A-Z]{2})v)\d+(?:\b|(?=[a-zA-Z_]))
+
+# hit-count: 1641 file-count: 225
+# Compiler flags
+(?:^|[\t ,>"'`=(])-[DWX](?=[A-Z]{2,}|[A-Z][a-z]|[a-z]{2,})
+(?:^|[\t ,>"'`=(])-P(?=[A-Z]{2,}|[A-Z][a-z]|[a-z]{2,})
+(?:^|[\t ,>"'`=(])-L(?![AIs])(?=[A-Z]{2,}|[A-Z][a-z]|[a-z]{2,})
+(?:^|[\t ,>"'`=(])-l(?![aio]|e[fn])(t(?!e)|)(?=[A-Z]{2,}|[A-Z][a-z]|[a-z]{2,})
+(?:^|[\t ,>"'`=(])-f(?!a|ield|i[ln]e|ill|inal|ind|old|ont|or|rame|ull|unc)(?=[A-Z]{2,}|[A-Z][a-z]|[a-z]{2,})
+
+# hit-count: 675 file-count: 203
+# C network byte conversions
+(?:\d|\bh)to(?!ken)(?=[a-z])|(?<!tos)to(?!ken)(?=[adhiklpun]\()
+
+# hit-count: 225 file-count: 145
+# node packages
+(["'])\@[^/'" ]+/[^/'" ]+\g{-1}
+
+# hit-count: 134 file-count: 15
+# IPv6
+\b(?:[0-9a-fA-F]{0,4}:){3,7}[0-9a-fA-F]{0,4}\b
+
+# hit-count: 111 file-count: 13
+# Non-English
+[a-zA-Z]*[ÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź][a-zA-Z]{3}[a-zA-ZÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź]*|[a-zA-Z]{3,}[ÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź]|[ÀÁÂÃÄÅÆČÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖØÙÚÛÜÝßàáâãäåæčçèéêëìíîïðñòóôõöøùúûüýÿĀāŁłŃńŅņŒœŚśŠšŜŝŸŽžź][a-zA-Z]{3,}
+
+# hit-count: 92 file-count: 21
+# alternate markers if you run into latex and friends
+(?<!\\)\\n(?=[a-z]{2,})(?=.*['"`])
+(?<!\\)\\t(?=[a-z]{2,})(?=.*=['"`])
+(?<!\\)\\r(?=[a-z]{2,})(?=.*['"`](?:$|\}|,))
+
+# hit-count: 62 file-count: 18
+# Lorem
+# Update Lorem based on your content (requires `ge` and `w` from https://github.com/jsoref/spelling; and `review` from https://github.com/check-spelling/check-spelling/wiki/Looking-for-items-locally )
+# grep '^[^#].*lorem' .github/actions/spelling/patterns.txt|perl -pne 's/.*i..\?://;s/\).*//' |tr '|' "\n"|sort -f |xargs -n1 ge|perl -pne 's/^[^:]*://'|sort -u|w|sed -e 's/ .*//'|w|review -
+# Warning, while `(?i)` is very neat and fancy, if you have some binary files that aren't proper unicode, you might run into:
+# ... Operation "substitution (s///)" returns its argument for non-Unicode code point 0x1C19AE (the code point will vary).
+# ... You could manually change `(?i)X...` to use `[Xx]...`
+# ... or you could add the files to your `excludes` file (a version after 0.0.19 should identify the file path)
+(?:(?:\w|\s|[,.])*\b(?i)(?:amet|consectetur|cursus|dolor|eros|ipsum|lacus|libero|ligula|lorem|magna|neque|nulla|suscipit|tempus)\b(?:\w|\s|[,.])*)
+
+
+# hit-count: 60 file-count: 21
+# uuid:
+\b[0-9a-fA-F]{8}-(?:[0-9a-fA-F]{4}-){3}[0-9a-fA-F]{12}\b
+
+# hit-count: 52 file-count: 6
+# Time Zones
+\b(?:Africa|Atlantic|America|Antarctica|Asia|Australia|Europe|Indian|Pacific)(?:/\w+)+
+
+# hit-count: 36 file-count: 29
+# GitHub SHAs (markdown)
+(?:\[`?[0-9a-f]+`?\]\(https:/|)/(?:www\.|)github\.com(?:/[^/\s"]+){2,}(?:/[^/\s")]+)(?:[0-9a-f]+(?:[-0-9a-zA-Z/#.]*|)\b|)
+
+# hit-count: 34 file-count: 22
+# base64 encoded content
+([`'"])[-a-zA-Z=;:/0-9+]{3,}=\g{-1}
+
+# hit-count: 31 file-count: 10
+# assign regex
+= /[^*]*?(?:[a-z]{3,}|[A-Z]{3,}|[A-Z][a-z]{2,}).*/g
+
+# hit-count: 27 file-count: 3
+# IServiceProvider / isAThing
+\b(?:I|isA)(?=(?:[I][a-z]{2,})+(?:[A-Z]|\b))
+
+# hit-count: 20 file-count: 13
+# tar arguments
+\b(?:\\n|)g?tar(?:\.exe|)(?:(?:\s+--[-a-zA-Z]+|\s+-[a-zA-Z]+|\s[ABGJMOPRSUWZacdfh-pr-xz]+\b)(?:=[^ ]*|))+
+
+# hit-count: 20 file-count: 6
+# base64 encoded content, possibly wrapped in mime
+(?:^|[\s=;:?])[-a-zA-Z=;:/0-9+]{50,}(?:[\s=;:?]|$)
+
+# hit-count: 13 file-count: 11
+# Wikipedia
+\ben\.wikipedia\.org/wiki/[-\w%.#]+
+
+# hit-count: 13 file-count: 5
+# Alternative printf
+# %s
+%(?:s(?=[a-z]{2,}))(?!%)(?=[_a-zA-Z]+(?!%)\b)(?=.*?['"])
+
+# hit-count: 10 file-count: 10
+# w3
+\bw3\.org/[-0-9a-zA-Z/#.]+
+
+# hit-count: 8 file-count: 2
+# Windows short paths
+[/\\][^/\\]{5,6}~\d{1,2}[/\\]
+
+# hit-count: 7 file-count: 1
+# https://www.gnu.org/software/groff/manual/groff.html
+# man troff content
+\\f[BCIPR]
+
+# hit-count: 6 file-count: 5
+# Localized .desktop content
+Name\[[^\]]+\]=.*
+
+# hit-count: 6 file-count: 3
+# javascript match regex
+\.match\(/[^/\s"]{3,}/[gim]*\s*
+
+# hit-count: 6 file-count: 2
+# Compiler flags (linker)
+,-B
+
+# hit-count: 4 file-count: 3
+# microsoft
+\b(?:https?://|)(?:(?:download\.visualstudio|docs|msdn2?|research)\.microsoft|blogs\.msdn)\.com/[-_a-zA-Z0-9()=./%]*
+
+# hit-count: 4 file-count: 2
+# data url in quotes
+([`'"])data:(?:[^ `'"].*?|)(?:[A-Z]{3,}|[A-Z][a-z]{2,}|[a-z]{3,}).*\g{-1}
+
+# hit-count: 3 file-count: 2
+# regex choice
+\bR".*\|.*"
+
+# hit-count: 2 file-count: 2
+# /message-id/
+/message-id/[-\w@./%]+
+
+# hit-count: 2 file-count: 2
+# bearer auth
+Bear[e][r]:? [-a-zA-Z=;:/0-9+.]+
+
+# hit-count: 2 file-count: 2
+# curl arguments
+\b(?:\\n|)curl(?:\.exe|)(?:\s+-[a-zA-Z]{1,2}\b)*(?:\s+-[a-zA-Z]{3,})(?:\s+-[a-zA-Z]+)*
+
+# hit-count: 2 file-count: 1
+# GitHub JSON
+"node_id": "[-a-zA-Z=;:/0-9+_]*"
+
+# hit-count: 1 file-count: 1
+# Google Storage
+\b[-a-zA-Z0-9.]*\bstorage\d*\.googleapis\.com(?:/\S*|)
+
+# hit-count: 1 file-count: 1
+# stackexchange -- https://stackexchange.com/feeds/sites
+\b(?:askubuntu|serverfault|stack(?:exchange|overflow)|superuser).com/(?:questions/\w+/[-\w]+|a/)
+
+# hit-count: 1 file-count: 1
+# sed regular expressions
+sed 's/(?:[^/]*?[a-zA-Z]{3,}[^/]*?/){2}
+
+create user (\w+) \g{-1}
+add_test_(?:derived|executable(?:_ex|))\(.*
+gauth_secret_key = ".*"
+(?:Bearer |token=|"token": ")[-a-zA-Z=;:./0-9+]+
+^\d+(?::{4}[^:]+){2}.*
+SCRAM-SHA-256\$4096:[-a-zA-Z=;:/0-9+$]*
+
+# arrays.sql
+\{(?:[A-F][0-9A-F]{2,}(?:,\s*|))+\}
+
+(?:add_test_derived|add_test_executable)\(.*
+
+# logs
+^\s*\*\s+(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)\s+\d+ \d+:\d+:\d+ [0-9a-f]+
+
+# postgr.es
+/postgr\.es/[-+%@./\w]+
+
+# Questionably acceptable forms of `in to`
+# Personally, I prefer `log into`, but people object
+# https://www.tprteaching.com/log-into-log-in-to-login/
+\b(?:[Ll]og|[Ss]ign) in to\b
+
+# to opt in
+\bto opt in\b
+
+# acceptable duplicates
+# ls directory listings
+[-bcdlpsw](?:[-r][-w][-SsTtx]){3}[\.+*]?\s+\d+\s+\S+\s+\S+\s+\d+\s+
+# mount
+\bmount\s+-t\s+(\w+)\s+\g{-1}\b
+# C types and repeated CSS values
+\s(all|auto|await|bob|center|distinct|div|inherit|lfdnr|long|LONG|none|normal|NOTE|qwe|SET|solid|thin|this|Tracey|transparent|very)(?: \g{-1})+\s
+# C struct
+\bstruct\s+(\w+)\s+\g{-1}\b
+# go templates
+\s(\w+)\s+\g{-1}\s+\`(?:graphql|inject|json|yaml):
+# doxygen / javadoc / .net
+(?:[\\@](?:brief|groupname|t?param|return|retval)|(?:public|private|\[Parameter(?:\(.+\)|)\])(?:\s+static|\s+override|\s+readonly)*)(?:\s+\{[*|\w]+\}|)\s+(\w+)\s+\g{-1}\s
+
+# Commit message -- Signed-off-by and friends
+^\s*(?:(?:Based-on-patch|Co-authored|Helped|Mentored|Reported|Reviewed|Signed-off)-by|Thanks-to): (?:[^<]*<[^>]*>|[^<]*)\s*$
+
+# Autogenerated revert commit message
+^This reverts commit [0-9a-f]{40}\.$
+
+# ignore long runs of a single character:
+\b([A-Za-z])\g{-1}{3,}\b

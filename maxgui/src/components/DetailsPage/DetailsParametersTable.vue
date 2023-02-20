@@ -154,7 +154,7 @@ export default {
         moduleParameters: { type: Array, required: true },
         updateResourceParameters: { type: Function, required: false },
         onEditSucceeded: { type: Function, required: false },
-        // specical props to manipulate required or dependent input attribute
+        // special props to manipulate required or dependent input attribute
         isTree: { type: Boolean, default: false },
         expandAll: { type: Boolean, default: false },
         editable: { type: Boolean, default: true },

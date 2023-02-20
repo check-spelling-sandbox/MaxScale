@@ -151,7 +151,7 @@ int conn_N = 50;
 
 TestConnections* Test;
 
-void* parall_traffic(void* ptr);
+void* parallel_traffic(void* ptr);
 
 
 int main(int argc, char* argv[])
@@ -163,7 +163,7 @@ int main(int argc, char* argv[])
     int num_conn = 0;
     char sql[100];
 
-    pthread_t parall_traffic1;
+    pthread_t parallel_traffic1;
 
     MYSQL* conn;
     MYSQL* rwsplit_conn[conn_N];
@@ -224,7 +224,7 @@ int main(int argc, char* argv[])
 
     Test->tprintf("Opening more connection to ReadConn slave in parallel thread\n");
 
-    pthread_create(&parall_traffic1, NULL, parall_traffic, NULL);
+    pthread_create(&parallel_traffic1, NULL, parallel_traffic, NULL);
 
     for (i = 0; i < Test->repl->N; i++)
     {
@@ -313,7 +313,7 @@ int main(int argc, char* argv[])
 }
 
 
-void* parall_traffic(void* ptr)
+void* parallel_traffic(void* ptr)
 {
     MYSQL* slave_conn1[conn_N];
     int i;

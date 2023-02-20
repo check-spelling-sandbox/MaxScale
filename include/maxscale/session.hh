@@ -642,7 +642,7 @@ uint64_t session_max_id();
  *
  * @note The caller must free the session reference by calling session_put_ref
  */
-MXS_SESSION* session_get_ref(MXS_SESSION* sessoin);
+MXS_SESSION* session_get_ref(MXS_SESSION* session);
 
 /**
  * @brief Release a session reference

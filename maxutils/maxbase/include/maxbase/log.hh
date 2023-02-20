@@ -400,7 +400,7 @@ using mxb_log_context_provider_t = size_t (*)(char* buffer, size_t len);
  * Prototype for function to be called when session tracing.
  *
  * @param timestamp The timestamp for the message.
- * @param message   The message abount to be logged.
+ * @param message   The message about to be logged.
  */
 using mxb_in_memory_log_t = void (*)(struct timeval timestamp, std::string_view message);
 

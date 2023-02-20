@@ -124,7 +124,7 @@ else()
   set(MAXSCALE_COMMIT "source-build")
 endif()
 
-# Copy cmake_flags, JENKINS_BUILD_TAG, source and value evironmental variables
+# Copy cmake_flags, JENKINS_BUILD_TAG, source and value environment variables
 # into cmake variables. These are used by the build system to store information
 # about the packages being built.
 set(MAXSCALE_SOURCE "$ENV{source} $ENV{value}")

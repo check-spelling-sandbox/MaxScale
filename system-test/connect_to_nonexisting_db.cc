@@ -69,7 +69,7 @@ int main(int argc, char* argv[])
     test.add_result(create_t1(conn), "Error creation 't1'");
     mysql_close(conn);
 
-    test.tprintf("Reconnectiong");
+    test.tprintf("Reconnecting");
     test.add_result(!try_connect(test), "Error connecting to Maxscale");
 
 

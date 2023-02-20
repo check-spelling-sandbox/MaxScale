@@ -653,7 +653,7 @@ private:
     // The set of temporary tables that have been created
     std::set<std::string> m_tmp_tables;
 
-    uint32_t m_prev_ps_id = 0;      /**< For direct PS execution, storest latest prepared PS ID.
+    uint32_t m_prev_ps_id = 0;      /**< For direct PS execution, stores latest prepared PS ID.
                                      * https://mariadb.com/kb/en/library/com_stmt_execute/#statement-id **/
 };
 

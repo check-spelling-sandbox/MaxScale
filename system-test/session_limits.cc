@@ -25,7 +25,7 @@
  * - open new session
  * - execute 10 session commands
  * - check if session is alive, expect ok
- * - execute one more session command, excpect failure
+ * - execute one more session command, expect failure
  */
 
 #include <maxtest/testconnections.hh>

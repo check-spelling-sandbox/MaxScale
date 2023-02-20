@@ -230,7 +230,7 @@ public:
      * Initialization, to be called *once* at program startup.
      *
      * @param argc  The argc provided to main.
-     * @param argv  The argv procided to main.
+     * @param argv  The argv provided to main.
      */
     static void init(int argc, char** argv);
 

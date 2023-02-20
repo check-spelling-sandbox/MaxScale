@@ -26,7 +26,7 @@
 #include <tuple>
 
 /**
- * Thread-safe (but not re-entrant) strerror.
+ * Thread-safe (but not reentrant) strerror.
  *
  * @param error  An errno value.
  *

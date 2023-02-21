@@ -2434,7 +2434,7 @@ MariaDBBackendConnection::StateMachineRes MariaDBBackendConnection::handshake()
     {
         switch (m_hs_state)
         {
-        case HandShakeState::SEND_PROHY_HDR:
+        case HandShakeState::SEND_PROXY_HDR:
             if (m_server.proxy_protocol())
             {
                 // If read was the first event triggered, send proxy header.

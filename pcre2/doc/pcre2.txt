@@ -3568,7 +3568,7 @@ CREATING A NEW STRING WITH SUBSTITUTIONS
        match. If the value is not zero, the current  replacement  is  not  ac-
        cepted.  If  the  value is greater than zero, processing continues when
        PCRE2_SUBSTITUTE_GLOBAL is set. Otherwise (the value is less than  zero
-       or  PCRE2_SUBSTITUTE_GLOBAL  is  not set), the the rest of the input is
+       or  PCRE2_SUBSTITUTE_GLOBAL  is  not set), the rest of the input is
        copied to the output and the call to pcre2_substitute() exits,  return-
        ing the number of matches so far.
 
@@ -10017,7 +10017,7 @@ COMPILING A PATTERN
        Note that REG_UTF is not part of the POSIX standard.
 
        In the absence of these flags, no options  are  passed  to  the  native
-       function.   This means the the regex is compiled with PCRE2 default se-
+       function.   This means the regex is compiled with PCRE2 default se-
        mantics. In particular, the way it handles newline  characters  in  the
        subject  string  is  the Perl way, not the POSIX way. Note that setting
        PCRE2_MULTILINE has only some of the effects specified for REG_NEWLINE.

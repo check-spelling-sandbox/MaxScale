@@ -107,7 +107,7 @@ const uint32_t PRIV(ucd_caseless_sets)[] = {
 };
 
 /* When #included in pcre2test, we don't need the table of digit
-sets, nor the the large main UCD tables. */
+sets, nor the large main UCD tables. */
 
 #ifndef PCRE2_PCRE2TEST
 

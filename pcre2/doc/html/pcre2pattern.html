@@ -3736,7 +3736,7 @@ If A matches but B fails, the backtrack to (*COMMIT) causes the entire match to
 fail. However, if A and B match, but C fails, the backtrack to (*THEN) causes
 the next alternative (ABD) to be tried. This behaviour is consistent, but is
 not always the same as Perl's. It means that if two or more backtracking verbs
-appear in succession, all the the last of them has no effect. Consider this
+appear in succession, all the last of them has no effect. Consider this
 example:
 <pre>
   ...(*COMMIT)(*PRUNE)...

@@ -42,7 +42,7 @@ integrity_check index3-1.4
 # Backwards compatibility test:
 #
 # Verify that CREATE INDEX statements that use strings instead of 
-# identifiers for the the column names continue to work correctly.
+# identifiers for the column names continue to work correctly.
 # This is undocumented behavior retained for backwards compatiblity.
 #
 do_execsql_test index3-2.1 {

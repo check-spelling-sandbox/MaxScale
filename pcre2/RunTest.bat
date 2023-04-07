@@ -514,7 +514,7 @@ goto :eof
 @echo.
 @echo Otherwise, if the build dir is in a subdir of the source dir, testdata needed
 @echo for input and verification should be found automatically when (from the
-@echo location of the the built exes) you call RunTest.bat. By default RunTest.bat
+@echo location of the built exes) you call RunTest.bat. By default RunTest.bat
 @echo runs all tests compatible with the linked pcre2 library but it can be given
 @echo a test number as an argument.
 @echo.

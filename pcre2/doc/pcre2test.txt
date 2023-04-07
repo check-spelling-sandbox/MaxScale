@@ -1569,7 +1569,7 @@ DEFAULT OUTPUT FROM pcre2test
        \xhh escapes if the value is less than 256 and UTF  mode  is  not  set.
        Otherwise they are output as \x{hh...} escapes. See below for the defi-
        nition of non-printing characters. If the aftertext  modifier  is  set,
-       the  output  for substring 0 is followed by the the rest of the subject
+       the  output  for substring 0 is followed by the rest of the subject
        string, identified by "0+" like this:
 
            re> /cat/aftertext

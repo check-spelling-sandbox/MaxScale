@@ -1461,7 +1461,7 @@ matching provokes an error return ("bad option value") from
 If the \fBsubstitute_callout\fP modifier is set, a substitution callout
 function is set up. The \fBnull_context\fP modifier must not be set, because
 the address of the callout function is passed in a match context. When the
-callout function is called (after each substitution), details of the the input
+callout function is called (after each substitution), details of the input
 and output strings are output. For example:
 .sp
   /abc/g,replace=<$0>,substitute_callout
@@ -1706,7 +1706,7 @@ If the strings contain any non-printing characters, they are output as \exhh
 escapes if the value is less than 256 and UTF mode is not set. Otherwise they
 are output as \ex{hh...} escapes. See below for the definition of non-printing
 characters. If the \fBaftertext\fP modifier is set, the output for substring
-0 is followed by the the rest of the subject string, identified by "0+" like
+0 is followed by the rest of the subject string, identified by "0+" like
 this:
 .sp
     re> /cat/aftertext

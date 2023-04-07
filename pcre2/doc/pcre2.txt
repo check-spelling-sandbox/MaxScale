@@ -3488,7 +3488,7 @@ CREATING A NEW STRING WITH SUBSTITUTIONS
        code. Except for PCRE2_ERROR_NOMATCH (which is never returned),  errors
        from pcre2_match() are passed straight back.
 
-       PCRE2_ERROR_NOSUBSTRING is returned for a non-existent substring inser-
+       PCRE2_ERROR_NOSUBSTRING is returned for a nonexistent substring inser-
        tion, unless PCRE2_SUBSTITUTE_UNKNOWN_UNSET is set.
 
        PCRE2_ERROR_UNSET is returned for an unset substring insertion (includ-

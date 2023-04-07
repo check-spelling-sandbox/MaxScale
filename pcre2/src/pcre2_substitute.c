@@ -660,7 +660,7 @@ do
         /* Find a number for a named group. In case there are duplicate names,
         search for the first one that is set. If the name is not found when
         PCRE2_SUBSTITUTE_UNKNOWN_EMPTY is set, set the group number to a
-        non-existent group. */
+        nonexistent group. */
 
         if (group < 0)
           {

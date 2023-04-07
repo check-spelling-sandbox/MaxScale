@@ -5301,7 +5301,7 @@ fprintf(stderr, "++ op=%d\n", *Fecode);
     /* The variable Flength will be added to Fecode when the condition is
     false, to get to the second branch. Setting it to the offset to the ALT or
     KET, then incrementing Fecode achieves this effect. However, if the second
-    branch is non-existent, we must point to the KET so that the end of the
+    branch is nonexistent, we must point to the KET so that the end of the
     group is correctly processed. We now have Fecode pointing to the condition
     or callout. */
 

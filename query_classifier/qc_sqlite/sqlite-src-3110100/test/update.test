@@ -16,7 +16,7 @@
 set testdir [file dirname $argv0]
 source $testdir/tester.tcl
 
-# Try to update an non-existent table
+# Try to update an nonexistent table
 #
 do_test update-1.1 {
   set v [catch {execsql {UPDATE test1 SET f2=5 WHERE f1<1}} msg]

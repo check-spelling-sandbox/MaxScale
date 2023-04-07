@@ -9790,7 +9790,7 @@ cb.backref_map = 0;
 /* Escape sequences \1 to \9 are always back references, but as they are only
 two characters long, only two elements can be used in the parsed_pattern
 vector. The first contains the reference, and we'd like to use the second to
-record the offset in the pattern, so that forward references to non-existent
+record the offset in the pattern, so that forward references to nonexistent
 groups can be diagnosed later with an offset. However, on 64-bit systems,
 PCRE2_SIZE won't fit. Instead, we have a vector of offsets for the first
 occurrence of \1 to \9, indexed by the second parsed_pattern value. All other

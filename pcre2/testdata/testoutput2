@@ -227,7 +227,7 @@ Starting code units: \x09 \x0a \x0b \x0c \x0d \x20 a b
 Subject length lower bound = 1
 
 /(ab\2)/
-Failed: error 115 at offset 4: reference to non-existent subpattern
+Failed: error 115 at offset 4: reference to nonexistent subpattern
 
 /{4,5}abc/
 Failed: error 109 at offset 4: quantifier does not follow a repeatable item
@@ -326,7 +326,7 @@ No match
 No match
 
 /(a)(b)(c)(d)(e)\6/
-Failed: error 115 at offset 16: reference to non-existent subpattern
+Failed: error 115 at offset 16: reference to nonexistent subpattern
 
 /the quick brown fox/I
 Capture group count = 0
@@ -559,7 +559,7 @@ Failed: error 124 at offset 4: missing closing parenthesis for condition
 Failed: error 128 at offset 2: assertion expected after (?( or (?(?C)
 
 /(?(abc))/
-Failed: error 115 at offset 3: reference to non-existent subpattern
+Failed: error 115 at offset 3: reference to nonexistent subpattern
 
 /(?(?<ab))/
 Failed: error 128 at offset 2: assertion expected after (?( or (?(?C)
@@ -857,13 +857,13 @@ Failed: error 109 at offset 2: quantifier does not follow a repeatable item
 Failed: error 122 at offset 0: unmatched closing parenthesis
 
 /\1/
-Failed: error 115 at offset 1: reference to non-existent subpattern
+Failed: error 115 at offset 1: reference to nonexistent subpattern
 
 /\2/
-Failed: error 115 at offset 1: reference to non-existent subpattern
+Failed: error 115 at offset 1: reference to nonexistent subpattern
 
 /(a)|\2/
-Failed: error 115 at offset 5: reference to non-existent subpattern
+Failed: error 115 at offset 5: reference to nonexistent subpattern
 
 /a[b-a]/Ii
 Failed: error 108 at offset 4: range out of order in character class
@@ -2227,7 +2227,7 @@ No match
 Failed: error 108 at offset 9: range out of order in character class
 
 /^(?(0)f|b)oo/I
-Failed: error 115 at offset 5: reference to non-existent subpattern
+Failed: error 115 at offset 5: reference to nonexistent subpattern
 
 # This one's here because of the large output vector needed
 
@@ -4051,7 +4051,7 @@ Subject length lower bound = 2
 No match
 
 /(?1)/I
-Failed: error 115 at offset 3: reference to non-existent subpattern
+Failed: error 115 at offset 3: reference to nonexistent subpattern
 
 /((?2)(abc)/I
 Failed: error 114 at offset 10: missing closing parenthesis
@@ -6037,7 +6037,7 @@ Subject length lower bound = 2
 Failed: error 124 at offset 7: missing closing parenthesis for condition
 
 /(?:(?(ZA)a|b)(?P<ZZ>X))+/I
-Failed: error 115 at offset 6: reference to non-existent subpattern
+Failed: error 115 at offset 6: reference to nonexistent subpattern
 
 /(?:(?(ZZ)a|b)(?(ZZ)a|b)(?P<ZZ>X))+/I
 Capture group count = 1
@@ -7175,7 +7175,7 @@ No match
 No match
 
 /^(?P>abc)(?<abcd>xxx)/
-Failed: error 115 at offset 5: reference to non-existent subpattern
+Failed: error 115 at offset 5: reference to nonexistent subpattern
 
 /^(?P>abc)(?<abc>x|y)/
     xx
@@ -7441,7 +7441,7 @@ Failed: error 142 at offset 6: syntax error in subpattern name (missing terminat
 Failed: error 162 at offset 4: subpattern name expected
 
 /(?('R')stuff)/
-Failed: error 115 at offset 4: reference to non-existent subpattern
+Failed: error 115 at offset 4: reference to nonexistent subpattern
 
 /((abc (?(R) (?(R1)1) (?(R2)2) X  |  (?1)  (?2)   (?R) ))) /x
     abcabc1Xabc2XabcXabcabc
@@ -7456,7 +7456,7 @@ Failed: error 115 at offset 4: reference to non-existent subpattern
  2: abcabc1Xabc2XabcX
 
 /(?<A> (?'B' abc (?(R) (?(R&C)1) (?(R&B)2) X  |  (?1)  (?2)   (?R) ))) /x
-Failed: error 115 at offset 27: reference to non-existent subpattern
+Failed: error 115 at offset 27: reference to nonexistent subpattern
 
 /^(?(DEFINE) abc | xyz ) /x
 Failed: error 154 at offset 4: DEFINE subpattern contains more than one branch
@@ -7665,19 +7665,19 @@ No match
 No match
 
 /^(a)\g-2/
-Failed: error 115 at offset 8: reference to non-existent subpattern
+Failed: error 115 at offset 8: reference to nonexistent subpattern
 
 /^(a)\g/
 Failed: error 157 at offset 6: \g is not followed by a braced, angle-bracketed, or quoted name/number or by a plain number
 
 /^(a)\g{0}/
-Failed: error 115 at offset 9: reference to non-existent subpattern
+Failed: error 115 at offset 9: reference to nonexistent subpattern
 
 /^(a)\g{3/
 Failed: error 157 at offset 6: \g is not followed by a braced, angle-bracketed, or quoted name/number or by a plain number
 
 /^(a)\g{aa}/
-Failed: error 115 at offset 7: reference to non-existent subpattern
+Failed: error 115 at offset 7: reference to nonexistent subpattern
 
 /^a.b/newline=lf
     a\rb
@@ -7803,13 +7803,13 @@ No match
 Failed: error 126 at offset 5: a relative value of zero is not allowed
 
 /x(?-1)y/
-Failed: error 115 at offset 5: reference to non-existent subpattern
+Failed: error 115 at offset 5: reference to nonexistent subpattern
 
 /x(?+0)y/
 Failed: error 126 at offset 5: a relative value of zero is not allowed
 
 /x(?+1)y/
-Failed: error 115 at offset 5: reference to non-existent subpattern
+Failed: error 115 at offset 5: reference to nonexistent subpattern
 
 /^(abc)?(?(-1)X|Y)/B
 ------------------------------------------------------------------
@@ -7868,7 +7868,7 @@ No match
 No match
 
 /(?(-1)a)/B
-Failed: error 115 at offset 5: reference to non-existent subpattern
+Failed: error 115 at offset 5: reference to nonexistent subpattern
 
 /((?(-1)a))/B
 ------------------------------------------------------------------
@@ -7884,7 +7884,7 @@ Failed: error 115 at offset 5: reference to non-existent subpattern
 ------------------------------------------------------------------
 
 /((?(-2)a))/B
-Failed: error 115 at offset 6: reference to non-existent subpattern
+Failed: error 115 at offset 6: reference to nonexistent subpattern
 
 /^(?(+1)X|Y)(.)/B
 ------------------------------------------------------------------
@@ -8389,7 +8389,7 @@ Failed: error 161 at offset 7: subpattern number is too big
 ------------------------------------------------------------------
 
 /(?1)\c[/
-Failed: error 115 at offset 3: reference to non-existent subpattern
+Failed: error 115 at offset 3: reference to nonexistent subpattern
 
 /.+A/newline=crlf
 \= Expect no match
@@ -8670,10 +8670,10 @@ Subject length lower bound = 2
 Failed: error 162 at offset 9: subpattern name expected
 
 /(?<abc>)(?&a)/
-Failed: error 115 at offset 11: reference to non-existent subpattern
+Failed: error 115 at offset 11: reference to nonexistent subpattern
 
 /(?<a>)(?&aaaaaaaaaaaaaaaaaaaaaaa)/
-Failed: error 115 at offset 9: reference to non-existent subpattern
+Failed: error 115 at offset 9: reference to nonexistent subpattern
 
 /(?+-a)/
 Failed: error 129 at offset 2: digit expected after (?+ or (?-
@@ -8682,13 +8682,13 @@ Failed: error 129 at offset 2: digit expected after (?+ or (?-
 Failed: error 111 at offset 3: unrecognized character after (? or (?-
 
 /(?(-1))/
-Failed: error 115 at offset 5: reference to non-existent subpattern
+Failed: error 115 at offset 5: reference to nonexistent subpattern
 
 /(?(+10))/
-Failed: error 115 at offset 4: reference to non-existent subpattern
+Failed: error 115 at offset 4: reference to nonexistent subpattern
 
 /(?(10))/
-Failed: error 115 at offset 3: reference to non-existent subpattern
+Failed: error 115 at offset 3: reference to nonexistent subpattern
 
 /(?(+2))()()/
 
@@ -8775,11 +8775,11 @@ No match
  0: TA]
 
 /(?2)[]a()b](abc)/
-Failed: error 115 at offset 3: reference to non-existent subpattern
+Failed: error 115 at offset 3: reference to nonexistent subpattern
     abcbabc
 
 /(?2)[^]a()b](abc)/
-Failed: error 115 at offset 3: reference to non-existent subpattern
+Failed: error 115 at offset 3: reference to nonexistent subpattern
     abcbabc
 
 /(?1)[]a()b](abc)/
@@ -8805,11 +8805,11 @@ No match
  2: xyz
 
 /(?&N)[]a(?<N>)](?<M>abc)/
-Failed: error 115 at offset 3: reference to non-existent subpattern
+Failed: error 115 at offset 3: reference to nonexistent subpattern
    abc<abc
 
 /(?&N)[]a(?<N>)](abc)/
-Failed: error 115 at offset 3: reference to non-existent subpattern
+Failed: error 115 at offset 3: reference to nonexistent subpattern
    abc<abc
 
 /a[]b/
@@ -9054,7 +9054,7 @@ No match
  1: 
 
 /^X(?5)(a)(?|(b)|(q))(c)(d)Y/
-Failed: error 115 at offset 5: reference to non-existent subpattern
+Failed: error 115 at offset 5: reference to nonexistent subpattern
     XYabcdY
 
 /^X(?&N)(a)(?|(b)|(q))(c)(d)(?<N>Y)/
@@ -9655,7 +9655,7 @@ Failed: error 125 at offset 4: lookbehind assertion is not fixed length
 Failed: error 125 at offset 2: lookbehind assertion is not fixed length
 
 /(?<=b(?1))xyz/
-Failed: error 115 at offset 8: reference to non-existent subpattern
+Failed: error 115 at offset 8: reference to nonexistent subpattern
 
 /(?<=b(?1))xyz(b+)pqrstuvew/
 Failed: error 125 at offset 0: lookbehind assertion is not fixed length
@@ -10482,7 +10482,7 @@ Failed: error 168 at offset 3: \c must be followed by a printable ASCII characte
 Failed: error 142 at offset 29: syntax error in subpattern name (missing terminator?)
 
 /(?P<abn>(?P=axn)xxx)/B
-Failed: error 115 at offset 12: reference to non-existent subpattern
+Failed: error 115 at offset 12: reference to nonexistent subpattern
 
 /(?P<abn>(?P=axn)xxx)(?<axn>yy)/B
 ------------------------------------------------------------------
@@ -13417,10 +13417,10 @@ Failed: error 178 at offset 3: digits missing in \x{} or \o{} or \N{U+}
 Failed: error 167 at offset 3: non-hex character in \x{} (closing brace missing?)
 
 /A\8B/
-Failed: error 115 at offset 2: reference to non-existent subpattern
+Failed: error 115 at offset 2: reference to nonexistent subpattern
 
 /A\9B/
-Failed: error 115 at offset 2: reference to non-existent subpattern
+Failed: error 115 at offset 2: reference to nonexistent subpattern
 
 # This one is here because Perl fails to match "12" for this pattern when the $
 # is present.
@@ -14274,10 +14274,10 @@ Failed: error 128 at offset 2: assertion expected after (?( or (?(?C)
 ------------------------------------------------------------------
 
 /(?<=\bABQ(3(?-7)))/
-Failed: error 115 at offset 15: reference to non-existent subpattern
+Failed: error 115 at offset 15: reference to nonexistent subpattern
 
 /(?<=\bABQ(3(?+7)))/
-Failed: error 115 at offset 15: reference to non-existent subpattern
+Failed: error 115 at offset 15: reference to nonexistent subpattern
 
 ";(?<=()((?3))((?2)))"
 Failed: error 125 at offset 1: lookbehind assertion is not fixed length
@@ -14339,7 +14339,7 @@ No match
  0: 
 
 /((((((((x))))))))\81/
-Failed: error 115 at offset 19: reference to non-existent subpattern
+Failed: error 115 at offset 19: reference to nonexistent subpattern
     xx1
 
 /((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((((x))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))\80/
@@ -14362,10 +14362,10 @@ Matched, but too many substrings
 14: x
 
 /\80/
-Failed: error 115 at offset 2: reference to non-existent subpattern
+Failed: error 115 at offset 2: reference to nonexistent subpattern
 
 /A\8B\9C/
-Failed: error 115 at offset 2: reference to non-existent subpattern
+Failed: error 115 at offset 2: reference to nonexistent subpattern
     A8B9C
 
 /(?x:((?'a')) # comment (with parentheses) and | vertical
@@ -14444,10 +14444,10 @@ Subject length lower bound = 1
 ------------------------------------------------------------------
 
 /(\9*+(?2);\3++()2|)++{/
-Failed: error 115 at offset 2: reference to non-existent subpattern
+Failed: error 115 at offset 2: reference to nonexistent subpattern
 
 /\V\x85\9*+((?2)\3++()2)*:2/
-Failed: error 115 at offset 7: reference to non-existent subpattern
+Failed: error 115 at offset 7: reference to nonexistent subpattern
 
 /(((?(R)){0,2}) (?'x'((?'R')((?'R')))))/dupnames
 
@@ -15633,7 +15633,7 @@ Failed: error -37: callout error code
 Failed: error 161 at offset 11: subpattern number is too big
 
 /()(\g+65533)/
-Failed: error 115 at offset 10: reference to non-existent subpattern
+Failed: error 115 at offset 10: reference to nonexistent subpattern
 
 /Á\x00\x00\x00š(\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\2*\x00k\d+\x00â€Ž\x00\x00\x00\x00\x00\2*\x00\x00\1*.){36}int^\x00\x00ÿÿ\x00š(\1{50779}?)J\w2/I
 Capture group count = 2

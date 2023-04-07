@@ -743,7 +743,7 @@ OPTIONS
                  limit above for details.
 
        -s, --no-messages
-                 Suppress  error  messages  about  non-existent  or unreadable
+                 Suppress  error  messages  about  nonexistent  or unreadable
                  files. Such files are quietly skipped.  However,  the  return
                  code is still 2, even if matches were found in other files.
 
@@ -992,7 +992,7 @@ MATCHING ERRORS
 DIAGNOSTICS
 
        Exit status is 0 if any matches were found, 1 if no matches were found,
-       and 2 for syntax errors, overlong lines, non-existent  or  inaccessible
+       and 2 for syntax errors, overlong lines, nonexistent  or  inaccessible
        files  (even if matches were found in other files) or too many matching
        errors. Using the -s option to suppress error messages about inaccessi-
        ble files does not affect the return code.

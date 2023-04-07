@@ -925,7 +925,7 @@ bugs were never in fully released code, but are noted here for the record.
 
   (a) If a pattern had fewer capturing parentheses than the ovector supplied in
       the match data block, a memory error (detectable by ASAN) occurred after
-      a match, because the external block was being set from non-existent
+      a match, because the external block was being set from nonexistent
       internal ovector fields. Fixes oss-fuzz issue 781.
 
   (b) A pattern with very many capturing parentheses (when the internal frame
@@ -1795,7 +1795,7 @@ recursions is postponed till match time. In the past, some easy ones were
 detected at compile time. This re-writing was done in response to yet another
 bug found by the LLVM fuzzer.
 
-31. A test for a back reference to a non-existent group was missing for items
+31. A test for a back reference to a nonexistent group was missing for items
 such as \987. This caused incorrect code to be compiled. This issue was found
 by Karl Skomski with a custom LLVM fuzzer.
 
@@ -2122,7 +2122,7 @@ a fixed maximum following a group that contains a subroutine reference was
 incorrectly compiled and could trigger buffer overflow. This bug was discovered
 by the LLVM fuzzer.
 
-14. Negative relative recursive references such as (?-7) to non-existent
+14. Negative relative recursive references such as (?-7) to nonexistent
 subpatterns were not being diagnosed and could lead to unpredictable behaviour.
 This bug was discovered by the LLVM fuzzer.
 

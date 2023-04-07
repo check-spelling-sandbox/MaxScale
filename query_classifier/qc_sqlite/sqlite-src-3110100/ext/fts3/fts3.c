@@ -266,7 +266,7 @@
 **
 ** This appears to have only a moderate impact on queries for very
 ** frequent terms (which are somewhat dominated by segment merge
-** costs), and infrequent and non-existent terms still seem to be fast
+** costs), and infrequent and nonexistent terms still seem to be fast
 ** even with many segments.
 **
 ** TODO(shess) That said, it would be nice to have a better query-side

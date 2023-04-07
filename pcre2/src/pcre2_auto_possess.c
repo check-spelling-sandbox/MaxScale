@@ -1097,7 +1097,7 @@ but some compilers complain about an unreachable statement. */
 
 /* Replaces single character iterations with their possessive alternatives
 if appropriate. This function modifies the compiled opcode! Hitting a
-non-existent opcode may indicate a bug in PCRE2, but it can also be caused if a
+nonexistent opcode may indicate a bug in PCRE2, but it can also be caused if a
 bad UTF string was compiled with PCRE2_NO_UTF_CHECK. The rec_limit catches
 overly complicated or large patterns. In these cases, the check just stops,
 leaving the remainder of the pattern unpossessified.

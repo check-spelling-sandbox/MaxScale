@@ -236,7 +236,7 @@ or more. The offsets of the first ocurrences of references to groups whose
 numbers are less than 10 are put in cb->small_ref_offset[] (only the first
 occurrence is useful). On 64-bit systems this avoids using more than two parsed
 pattern elements for items such as \3. The offset is used when an error occurs
-because the reference is to a non-existent group.
+because the reference is to a nonexistent group.
 
 META_RECURSE is always followed by an offset, for use in error messages.
 

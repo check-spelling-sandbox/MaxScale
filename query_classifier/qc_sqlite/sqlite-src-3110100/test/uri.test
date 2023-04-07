@@ -143,7 +143,7 @@ tvfs delete
 tvfs2 delete
 
 #-------------------------------------------------------------------------
-# Test that specifying a non-existent VFS raises an error.
+# Test that specifying a nonexistent VFS raises an error.
 #
 do_test 3.1 {
   list [catch { sqlite3 db "file:test.db?vfs=nosuchvfs" } msg] $msg

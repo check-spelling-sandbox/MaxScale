@@ -4709,7 +4709,7 @@
 \= Expect no match
     AAAC
 
-# This should succeed, as a non-existent skip name disables the skip.
+# This should succeed, as a nonexistent skip name disables the skip.
 
 /A(*MARK:A)A+(*SKIP:B)(B|Z) | AC/x,mark
     AAAC

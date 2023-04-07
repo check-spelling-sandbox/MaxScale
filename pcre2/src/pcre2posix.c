@@ -130,7 +130,7 @@ static const int eint1[] = {
   REG_BADPAT,  /* POSIX collating elements are not supported */
   REG_EPAREN,  /* missing ) */
   /* 15 */
-  REG_ESUBREG, /* reference to non-existent subpattern */
+  REG_ESUBREG, /* reference to nonexistent subpattern */
   REG_INVARG,  /* pattern passed as NULL */
   REG_INVARG,  /* unknown compile-time option bit(s) */
   REG_EPAREN,  /* missing ) after (?# comment */

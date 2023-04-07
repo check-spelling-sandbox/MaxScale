@@ -2442,7 +2442,7 @@ pid = fork();
 if (pid == 0)
   {
   (void)execv(argsvector[0], argsvector);
-  /* Control gets here if there is an error, e.g. a non-existent program */
+  /* Control gets here if there is an error, e.g. a nonexistent program */
   exit(1);
   }
 else if (pid > 0)

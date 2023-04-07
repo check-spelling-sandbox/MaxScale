@@ -81,7 +81,7 @@ static const unsigned char compile_error_texts[] =
   "POSIX collating elements are not supported\0"
   "missing closing parenthesis\0"
   /* 15 */
-  "reference to non-existent subpattern\0"
+  "reference to nonexistent subpattern\0"
   "pattern passed as NULL\0"
   "unrecognised compile-time option bit(s)\0"
   "missing ) after (?# comment\0"

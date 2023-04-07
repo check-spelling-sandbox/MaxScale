@@ -244,7 +244,7 @@ add_test_executable(ccrfilter_global.cc ccrfilter_global_test ccrfilter_global L
 # Tries to reconfigure replication setup to use another node as a Master
 add_test_executable(change_master_during_session.cc change_master_during_session replication LABELS readwritesplit mysqlmon REPL_BACKEND)
 
-# Tries to connect to non existing DB, expects no crash
+# Tries to connect to nonexistent DB, expects no crash
 add_test_executable(connect_to_nonexisting_db.cc connect_to_nonexisting_db replication LABELS MySQLAuth MySQLProtoco LIGHT REPL_BACKEND)
 
 # check if max_connections parameter works

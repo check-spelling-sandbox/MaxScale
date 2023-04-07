@@ -564,7 +564,7 @@ Patch by Guillem Jover.
 warnings were reported.
 
 38. Using the clang compiler with sanitizing options causes runtime complaints
-about truncation for statments such as x = ~x when x is an 8-bit value; it
+about truncation for statements such as x = ~x when x is an 8-bit value; it
 seems to compute ~x as a 32-bit value. Changing such statements to x = 255 ^ x
 gets rid of the warnings. There were also two missing casts in pcre2test.
 

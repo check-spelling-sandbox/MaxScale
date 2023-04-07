@@ -2237,7 +2237,7 @@ static int spellfix1RowCompare(const void *A, const void *B){
 */
 typedef struct MatchQuery {
   spellfix1_cursor *pCur;          /* The cursor being queried */
-  sqlite3_stmt *pStmt;             /* shadow table query statment */
+  sqlite3_stmt *pStmt;             /* shadow table query statement */
   char zHash[SPELLFIX_MX_HASH];    /* The current phonehash for zPattern */
   const char *zPattern;            /* Transliterated input string */
   int nPattern;                    /* Length of zPattern */

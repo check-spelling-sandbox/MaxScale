@@ -16,7 +16,7 @@
 
 # Test plan:
 #
-#   shell3-1.*: Basic tests for running SQL statments from command line.
+#   shell3-1.*: Basic tests for running SQL statements from command line.
 #   shell3-2.*: Basic tests for running SQL file from command line.
 #
 set testdir [file dirname $argv0]
@@ -35,7 +35,7 @@ forcedelete test.db test.db-journal test.db-wal
 sqlite3 db test.db
 
 #----------------------------------------------------------------------------
-#   shell3-1.*: Basic tests for running SQL statments from command line.
+#   shell3-1.*: Basic tests for running SQL statements from command line.
 #
 
 # Run SQL statement from command line

@@ -2566,7 +2566,7 @@ void sqlite3SelectWrongNumTermsError(Parse *pParse, Select *p){
 
 /*
 ** Code an output subroutine for a coroutine implementation of a
-** SELECT statment.
+** SELECT statement.
 **
 ** The data to be output is contained in pIn->iSdst.  There are
 ** pIn->nSdst columns to be output.  pDest is where the output should

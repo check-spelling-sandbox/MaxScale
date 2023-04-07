@@ -2360,7 +2360,7 @@ static int test_snapshot_free(
 /*
 ** Usage:  sqlite3_next_stmt  DB  STMT
 **
-** Return the next statment in sequence after STMT.
+** Return the next statement in sequence after STMT.
 */
 static int test_next_stmt(
   void * clientData,

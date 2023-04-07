@@ -73,7 +73,7 @@ add_subdirectory(rest-api)
 
 # GCC 10 has a broken ASAN implementation that got fixed in GCC 11. The
 # --as-needed flag breaks the crypt and crypt_r interceptors in ASAN and the
-# tests that use it must disble the feature that breaks it. For Debian, adding
+# tests that use it must disable the feature that breaks it. For Debian, adding
 # --no-as-needed would fix it but for SLES 15 it still ends up failing. There's
 # a bug in SLES 15 where the size of struct crypt_data is different in ASAN than
 # it in reality is which causes ASAN itself to trigger a stack overflow that it

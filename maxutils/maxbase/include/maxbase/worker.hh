@@ -865,7 +865,7 @@ protected:
      * Set minimum timeout when calling epoll_wait() in the Worker
      * event-loop.
      *
-     * @note The granularity of the worker load calculatation is
+     * @note The granularity of the worker load calculation is
      *       1000ms. Unless the minimum timeout is significantly
      *       less than that, the load calculation will not work
      *       properly.

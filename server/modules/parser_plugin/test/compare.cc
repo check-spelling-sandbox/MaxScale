@@ -64,7 +64,7 @@ namespace
 {
 
 char USAGE[] =
-    "usage: compare [-r count] [-d] [-0 classifier] [-1 classfier1] [-2 classifier2] "
+    "usage: compare [-r count] [-d] [-0 classifier] [-1 classifier1] [-2 classifier2] "
     "[-A args] [-B args] [-C args] [-m [default|oracle]] [-v [0..2]] "
     "[-H (postgres|mariadb)] [-E (postgres|mariadb)] "
     "[-p properties] [-x regex] [-c regex] [-s statement]|[file+]]\n\n"

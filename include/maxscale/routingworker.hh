@@ -134,7 +134,7 @@ public:
         Data();
 
         /**
-         * Peform worker initialization.
+         * Perform worker initialization.
          *
          * This call will, if the routing workers are already running, cause
          * @c init_for() to be called for each worker. If the routing workers
@@ -443,8 +443,8 @@ public:
      * @attention The return value tells *only* whether message could be posted,
      *            *not* that it has reached the worker.
      *
-     * @attentsion Exactly the same arguments are passed to all workers. Take that
-     *             into account if the passed data must be freed.
+     * @attention Exactly the same arguments are passed to all workers. Take that
+     *            into account if the passed data must be freed.
      *
      * @attention This function is signal safe.
      */
@@ -886,7 +886,7 @@ private:
     using TickFuncs = std::vector<std::function<void()>>;
     using Datas = std::vector<Data*>;
 
-    static Datas       s_datas;     /*< Datas that need to be inited/finishe for each worker. */
+    static Datas       s_datas;     /*< Datas that need to be inited/finished for each worker. */
     static std::mutex  s_datas_lock;
 
     int                m_index;     /*< Index of routing worker */

@@ -32,7 +32,7 @@ enum skip_action_t
     SKIP_DELIMITER,     // Skip the new delimiter.
     SKIP_LINE,          // Skip current line.
     SKIP_NEXT_STATEMENT,// Skip statement starting on line following this line.
-    SKIP_STATEMENT,     // Skip statment starting on this line.
+    SKIP_STATEMENT,     // Skip statement starting on this line.
     SKIP_TERMINATE,     // Cannot handle this, terminate.
 };
 

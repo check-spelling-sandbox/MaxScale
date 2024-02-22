@@ -17,7 +17,7 @@
  * - configure binlog router setup, avro router, avro listener
  * - connect to avro listener
  * - start INSERT load thread
- * - read data from avro listener, comapre it with inserted data
+ * - read data from avro listener, compare it with inserted data
  */
 
 #include <atomic>
@@ -45,7 +45,7 @@ bool exit_flag = false;
 void* query_thread(void* ptr);
 
 /**
- * @brief cdc_com Connects to avro listenet by CDC protocal, read data, compare data with inserted data
+ * @brief cdc_com Connects to avro listener by CDC protocol, read data, compare data with inserted data
  * @param Test TestConnections object
  * @return true if test PASSED
  */
@@ -92,7 +92,7 @@ bool cdc_com(TestConnections* Test)
     free(get);
     if (rv != 0)
     {
-        Test->tprintf("Cat't send data to scoket");
+        Test->tprintf("Can't send data to socket");
         return false;
     }
 
@@ -102,7 +102,7 @@ bool cdc_com(TestConnections* Test)
     // Send the query to the server
     if (send_so(sock, reg_str) != 0)
     {
-        Test->tprintf("Cat't send data to scoket");
+        Test->tprintf("Can't send data to socket");
         return false;
     }
 
@@ -111,7 +111,7 @@ bool cdc_com(TestConnections* Test)
     // Send the query to the server
     if (send_so(sock, req_str) != 0)
     {
-        Test->tprintf("Cat't send data to scoket");
+        Test->tprintf("Can't send data to socket");
         return false;
     }
 

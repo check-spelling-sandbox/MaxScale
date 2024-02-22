@@ -64,7 +64,7 @@ namespace
  * nRunning:    The number of running threads, when viewed from the outside. Running threads
  *              are all active and draining threads, and also inactive threads that are waiting
  *              for other draining threads to become inactive before they can be removed.
- *              The follwing will always hold: 1 <= nRunning <= nMax.
+ *              The following will always hold: 1 <= nRunning <= nMax.
  * nConfigured: The configured number of threads. When a user issues 'maxctrl alter maxscale threads=N'
  *              nConfigured will be immediately set to N (subject to some possible failures), but
  *              when the number of threads is reduced nRunning will become N, only when the
@@ -531,7 +531,7 @@ void RoutingWorker::deactivate()
             auto nRunning = this_unit.nRunning.load(std::memory_order_relaxed);
             if (index() == nRunning - 1)
             {
-                // We are in the last last worker.
+                // We are in the last worker.
                 terminate_last_if_dormant(true);
             }
         }
@@ -2063,7 +2063,7 @@ void RoutingWorker::terminate()
         if (maxscale_is_shutting_down())
         {
             MXB_NOTICE("Terminating worker %d going down immediately, "
-                       "as MaxScale shutdown has been iniated.",
+                       "as MaxScale shutdown has been initiated.",
                        index());
             ready_to_proceed = true;
         }

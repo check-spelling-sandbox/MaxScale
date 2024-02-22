@@ -1722,7 +1722,7 @@ uint32_t MariaDBBackendConnection::create_capabilities(bool with_ssl) const
         final_capabilities &= ~GW_MYSQL_CAPABILITIES_CONNECT_WITH_DB;
     }
 
-    // The current handshake response generation code assumes that the follwing capabilites are always
+    // The current handshake response generation code assumes that the following capabilities are always
     // enabled. Since the plugin is always mysql_native_password, the AUTH_LELENC_DATA isn't really needed as
     // the auth data size is always 20 bytes and both the length-encoded string representation and the string
     // prefixed with fixed size integer representation are the same for payloads less than 251 bytes.
@@ -2434,7 +2434,7 @@ MariaDBBackendConnection::StateMachineRes MariaDBBackendConnection::handshake()
     {
         switch (m_hs_state)
         {
-        case HandShakeState::SEND_PROHY_HDR:
+        case HandShakeState::SEND_PROXY_HDR:
             if (m_server.proxy_protocol())
             {
                 // If read was the first event triggered, send proxy header.

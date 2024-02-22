@@ -567,7 +567,7 @@ function pingCluster(hosts) {
   return hosts.length > 1 ? Promise.all(hosts.map((i) => doRequest(i, ""))) : Promise.resolve();
 }
 
-// Helper for converting endpoints to acutal URLs
+// Helper for converting endpoints to actual URLs
 function getUri(host, endpoint) {
   var base = argv.secure ? "https://" : "http://";
 

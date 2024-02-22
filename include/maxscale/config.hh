@@ -230,7 +230,7 @@ public:
      * Initialization, to be called *once* at program startup.
      *
      * @param argc  The argc provided to main.
-     * @param argv  The argv procided to main.
+     * @param argv  The argv provided to main.
      */
     static void init(int argc, char** argv);
 
@@ -488,7 +488,7 @@ public:
     std::string               admin_jwt_key;        /**< Key used with symmetric JWT algorithms */
     seconds                   admin_jwt_max_age;    /**< Maximum JWT lifetime */
     std::string               admin_jwt_issuer;     /**< Token issuer */
-    std::string               admin_oidc_url;       /**< OIDC server for for external JWTs */
+    std::string               admin_oidc_url;       /**< OIDC server for external JWTs */
     std::string               admin_verify_url;     /**< URL that points to a verification server */
 
     std::string local_address;          /**< Local address/hostname for outbound connections */

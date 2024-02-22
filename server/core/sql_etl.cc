@@ -340,7 +340,7 @@ public:
          *   fields to be defined and they do not need to be a part of the PRIMARY KEY to work. MariaDB
          *   requires that there is only one AUTO_INCREMENT field and it must be a part of the primary key.
          *
-         * - Fields with with 'NULL::' as the starting of the expression mean that the field has a default
+         * - Fields with 'NULL::' as the starting of the expression mean that the field has a default
          *   value of NULL. This usually seems to happen when an explicit NULL default is used instead of an
          *   implicit one.
          *
@@ -606,7 +606,7 @@ std::unique_ptr<ETL> create(std::string_view id, const mxb::Json& json,
         ss << extra;
     }
 
-    uint64_t option = mxq::ODBC::MULTI_STMT // Enables multi-statment SQL.
+    uint64_t option = mxq::ODBC::MULTI_STMT // Enables multi-statement SQL.
         | mxq::ODBC::FORWARDONLY            // Forces a forward-only cursor (fixes some legacy problems)
         | mxq::ODBC::NO_CACHE;              // Streams the resultset instead of reading it into memory
 

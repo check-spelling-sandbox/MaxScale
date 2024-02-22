@@ -448,7 +448,7 @@ export default {
         },
 
         durationSuffixSwapper(newSuffix, oldSuffix, val) {
-            // convert to miliseconds from oldSuffix
+            // convert to milliseconds from oldSuffix
             const ms = convertDuration({ suffix: oldSuffix, val })
             switch (newSuffix) {
                 case 'ms':

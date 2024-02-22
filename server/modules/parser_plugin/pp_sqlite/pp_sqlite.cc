@@ -248,7 +248,7 @@ public:
             size += m_sPreparable_stmt->varying_size();
         }
 
-        // m_canonical not to be shrink_to_fit(). Not needed and should actaully be
+        // m_canonical not to be shrink_to_fit(). Not needed and should actually be
         // shrunk, all string_views would be invalidated.
         size += m_canonical.size();
 
@@ -2187,7 +2187,7 @@ public:
 
     int maxscaleComment()
     {
-        // We are regularily parsing if the thread has been initialized.
+        // We are regularly parsing if the thread has been initialized.
         // In that case # should be interpreted as the start of a comment,
         // otherwise it should not.
         int regular_parsing = false;

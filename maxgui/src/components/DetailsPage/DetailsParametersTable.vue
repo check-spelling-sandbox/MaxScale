@@ -133,7 +133,7 @@ This component allows to read parameters and edit parameters. It means to be use
 
 PROPS:
 - overridingModuleParams props allows to override parameters in module_parameters. This props is only used
-  in case module_prameters doesn't include type info for nested object. e.g. log_throttling parameter
+  in case module_parameters doesn't include type info for nested object. e.g. log_throttling parameter
  */
 import { mapState, mapGetters } from 'vuex'
 import { OVERLAY_TRANSPARENT_LOADING } from '@share/overlayTypes'
@@ -154,7 +154,7 @@ export default {
         moduleParameters: { type: Array, required: true },
         updateResourceParameters: { type: Function, required: false },
         onEditSucceeded: { type: Function, required: false },
-        // specical props to manipulate required or dependent input attribute
+        // special props to manipulate required or dependent input attribute
         isTree: { type: Boolean, default: false },
         expandAll: { type: Boolean, default: false },
         editable: { type: Boolean, default: true },

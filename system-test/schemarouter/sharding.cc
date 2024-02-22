@@ -34,7 +34,7 @@
  *
  *  @endverbatim
  * - stop all slaves in Master/Slave setup
- * - restrt Maxscale
+ * - restart Maxscale
  * - using direct connection to backend nodes
  *    - create user0...userN users on all nodes
  *    - create sharddb on all nodes

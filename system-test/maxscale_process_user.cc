@@ -13,7 +13,7 @@
  */
 
 /**
- * Check if Maxscale priocess is running as 'maxscale'
+ * Check if Maxscale process is running as 'maxscale'
  */
 
 #include <maxtest/testconnections.hh>

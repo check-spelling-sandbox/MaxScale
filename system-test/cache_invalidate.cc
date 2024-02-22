@@ -72,7 +72,7 @@ Result check(TestConnections& test, Connection& c, const string& stmt, Expect ex
                      stmt.c_str());
 
         test.expect(base_line == rows,
-                    "After '%s' the result result was not identical from a non-invalidated cache.",
+                    "After '%s' the result was not identical from a non-invalidated cache.",
                     stmt.c_str());
     }
     else
@@ -81,7 +81,7 @@ Result check(TestConnections& test, Connection& c, const string& stmt, Expect ex
                      stmt.c_str());
 
         test.expect(base_line != rows,
-                    "After '%s' the result result was identical from an invalidated cache.",
+                    "After '%s' the result was identical from an invalidated cache.",
                     stmt.c_str());
     }
 
